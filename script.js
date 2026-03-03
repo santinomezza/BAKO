@@ -25,3 +25,74 @@ hero.addEventListener("mousemove", (e) => {
 
   updateImage();
 });
+
+
+
+let carrito =[];
+
+function agregarAlCarrito(nombre, precio, idCantidad) {
+  
+  const cantidad =parseInt(document.getElementById(idCantidad).value);
+  
+  if (isNaN(cantidad) || isNaN(cantidad)) {
+    alert("Por favor, ingrese una cantidad válida.");
+    return;
+  }
+
+  const productOExistente = carrito.find(prod => prod.nombre === nombre);
+
+  if (productOExistente) {
+    productOExistente.cantidad += cantidad;
+  } else {
+    carrito.push({ nombre, precio, cantidad });
+  }
+
+alert("Producto agregado al carrito");
+console.log(carrito); 
+}
+
+
+
+
+
+
+
+
+
+
+function enviarPedido(event) {
+    event.preventDefault();
+
+    const nombre = document.getElementById("nombre").value;
+    const apellido = document.getElementById("apellido").value;
+    const direccion = document.getElementById("direccion").value;
+    const correo = document.getElementById("correo").value;
+    const pago = document.getElementById("pago").value;
+
+    let mensaje = "🧢 NUEVO PEDIDO - BAKO\n\n";
+
+    let total = 0;
+
+    carrito.forEach(prod => {
+        mensaje += `Producto: ${prod.nombre}\n`;
+        mensaje += `Cantidad: ${prod.cantidad}\n`;
+        mensaje += `Subtotal: $${prod.precio * prod.cantidad}\n\n`;
+
+        total += prod.precio * prod.cantidad;
+    });
+
+    mensaje += `TOTAL: $${total}\n\n`;
+
+    mensaje += "👤 DATOS DEL CLIENTE\n";
+    mensaje += `Nombre: ${nombre} ${apellido}\n`;
+    mensaje += `Dirección: ${direccion}\n`;
+    mensaje += `Correo: ${correo}\n`;
+    mensaje += `Pago: ${pago}`;
+
+    const numero = "5493834340335"; // TU NUMERO CON CODIGO PAIS
+
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+    window.open(url, "_blank");
+}
+
