@@ -1,0 +1,17 @@
+.lifestyle-banner {
+  height: 60vh;
+  background: $beige;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  h2 {
+    font-size: 36px;
+    letter-spacing: 3px;
+  }
+
+  p {
+    margin: 20px 0;
+  }
+}

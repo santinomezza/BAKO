@@ -1,0 +1,30 @@
+.footer {
+  background: $dark;
+  color: $gray;
+  padding: 60px 8%;
+
+  .footer-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    h4 {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        margin-bottom: 8px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 13px;
+  }
+}

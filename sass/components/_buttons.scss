@@ -1,0 +1,28 @@
+
+.btn-primary {
+  padding: 12px 30px;
+  border: none;
+  background: $brown;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: $transition;
+
+  &:hover {
+    background: $black;
+    transform: translateY(-3px);
+  }
+}
+
+.btn-secondary {
+  padding: 10px 20px;
+  border: 1px solid $black;
+  background: transparent;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    background: $black;
+    color: white;
+  }
+}

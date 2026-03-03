@@ -1,0 +1,19 @@
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+
+  .category {
+    padding: 40px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border: 1px solid #ddd;
+    transition: $transition;
+
+    &:hover {
+      background: $black;
+      color: white;
+    }
+  }
+}

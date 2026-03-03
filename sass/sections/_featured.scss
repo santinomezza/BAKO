@@ -1,0 +1,36 @@
+
+.featured {
+  padding: 80px 8%;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 50px;
+    letter-spacing: 3px;
+  }
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.product-card {
+  background: white;
+  padding: 20px;
+  transition: $transition;
+
+  h3 {
+    margin: 15px 0;
+    font-size: 16px;
+  }
+
+  p {
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}

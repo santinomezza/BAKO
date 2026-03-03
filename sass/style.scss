@@ -1,0 +1,30 @@
+@import "base/variables";
+@import "base/reset";
+@import "base/global";
+
+@import "components/buttons";
+@import "components/cards";
+
+@import "layout/header";
+@import "layout/topbar";
+@import "layout/footer";
+
+@import "sections/hero";
+@import "sections/banner";
+@import "sections/categories";
+@import "sections/featured";
+@import "sections/newsletter";
+@import "sections/catalogo";
+
+@media (max-width: 900px) {
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+

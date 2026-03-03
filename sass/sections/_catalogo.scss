@@ -1,0 +1,74 @@
+.catalogo {
+  display: flex;
+  justify-content: center;
+  padding: 60px 5%;
+  background: #111;
+  gap: 50px;
+}
+
+.producto {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 16px;
+  width: 320px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+.producto:hover {
+  transform: translateY(-10px);
+}
+
+.galeria {
+  text-align: center;
+}
+
+.imagen-principal {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: opacity 0.3s ease;
+}
+
+.miniaturas {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.miniaturas img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.miniaturas img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #111;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: white;
+    color: #111;
+}
