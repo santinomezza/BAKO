@@ -444,32 +444,13 @@ a {
   transform: translateY(-5px);
 }
 
-.newsletter {
-  background: #111111;
-  color: white;
-  text-align: center;
-  padding: 60px 8%;
-}
-.newsletter input {
-  padding: 10px;
-  width: 250px;
-  border: none;
-  margin-right: 10px;
-}
-.newsletter button {
-  padding: 10px 20px;
-  border: none;
-  background: #8A6E5A;
-  color: white;
-  cursor: pointer;
-}
-
 .catalogo {
-  display: flex;
-  justify-content: center;
-  padding: 60px 5%;
-  background: #111;
+  display: grid;
+  grid-template-columns: repeat(3, 320px); /* máximo 3 */
+  justify-content: center; /* centra las columnas */
   gap: 50px;
+  padding: 60px 0;
+  background: #111;
 }
 
 .producto {
@@ -519,12 +500,12 @@ a {
 }
 
 .info {
-  margin-top: 20px;
+  margin: 20px;
   text-align: center;
 }
 
-button {
-  margin-top: 10px;
+.btn-whatsapp {
+  margin-top: 20px;
   padding: 10px 20px;
   border: none;
   background-color: #111;
@@ -534,9 +515,16 @@ button {
   transition: 0.3s;
 }
 
-button:hover {
+.btn-whatsapp:hover {
   background-color: white;
   color: #111;
+}
+
+.boton-comprar {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  padding: 10px 20px;
 }
 
 @media (max-width: 900px) {
