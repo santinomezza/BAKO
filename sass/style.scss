@@ -14,7 +14,6 @@
 @import "sections/categories";
 @import "sections/featured";
 @import "sections/catalogo";
-@import "sections/formulario";
 @import "sections/nosotros";
 @import "sections/contacto";
 @import "sections/carrito";
@@ -30,4 +29,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
+html {
+  scroll-behavior: smooth;
+}

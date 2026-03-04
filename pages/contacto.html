@@ -4,13 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <title>Contacto | BAKO</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
 <header class="header">
-  <h1>BAKO</h1>
+  <div class="logo">
+    <h1><a href="index.html">BAKO</a></h1>
+  </div>
+  <nav class="nav">
+    <ul>
+      <li class="enlaces-header"><a href="../index.html#destacados">DESTACADOS</a></li>
+      <li class="enlaces-header"><a href="../index.html#catalogo">GORRAS</a></li>
+      <li class="enlaces-header"><a href="../index.html#nosotros">NOSOTROS</a></li>
+      <li class="enlaces-header"><a href="contacto.html">CONTACTO</a></li>
+    </ul>
+  </nav>
 </header>
 
 <section class="contact-hero">
@@ -26,11 +36,12 @@
     <div class="contact-form">
       <h3>Enviános un mensaje</h3>
 
-      <form>
-        <input type="text" placeholder="Nombre completo" required>
-        <input type="email" placeholder="Email" required>
-        <input type="text" placeholder="Asunto">
-        <textarea placeholder="Escribí tu mensaje..." required></textarea>
+<form id="form-contacto">
+<input type="text" id="nombre" placeholder="Nombre " required>
+<input type="text" id="apellido" placeholder="Apellido" required>
+<input type="email" id="email" placeholder="Email" required>
+<input type="text" id="asunto" placeholder="Asunto">
+<textarea id="mensaje" placeholder="Escribí tu mensaje..." required></textarea>
         <button type="submit">Enviar mensaje</button>
       </form>
     </div>
@@ -54,5 +65,37 @@
 
 </section>
 
+
+
+
+<script>
+document.getElementById("form-contacto").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const nombre = document.getElementById("nombre").value;
+  const apellido = document.getElementById("apellido").value;
+  const email = document.getElementById("email").value;
+  const asunto = document.getElementById("asunto").value;
+  const mensaje = document.getElementById("mensaje").value;
+
+  const numero = "5493834340335"; 
+
+  const texto = `Hola! 👋
+
+📌 *Nuevo mensaje desde BAKO*
+
+👤 Nombre: ${nombre}
+📧 Email: ${email}
+📝 Asunto: ${asunto}
+
+💬 Mensaje:
+${mensaje}
+`;
+
+  const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+  window.open(url, "_blank");
+});
+</script>
 </body>
 </html>

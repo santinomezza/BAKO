@@ -2,33 +2,86 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrito | BAKO</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="../assets/css/style.css">
-
-  <!-- ICONOS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body class="carrito-page">
+<body>
+<header class="header">
+  <div class="logo">
+    <h1><a href="index.html">BAKO</a></h1>
+  </div>
+  <nav class="nav">
+    <ul>
+      <li class="enlaces-header"><a href="../index.html#destacados">DESTACADOS</a></li>
+      <li class="enlaces-header"><a href="../index.html#catalogo">GORRAS</a></li>
+      <li class="enlaces-header"><a href="../index.html#nosotros">NOSOTROS</a></li>
+      <li class="enlaces-header"><a href="contacto.html">CONTACTO</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <section class="carrito-container">
+  <section class="carrito">
 
-    <h1 class="titulo-carrito">Tu Carrito 🛒</h1>
+    <h1 class="carrito__title">Tu Carrito</h1>
 
-    <div id="resumen-carrito" class="lista-carrito"></div>
+    <!-- CONTENEDOR DINÁMICO -->
+    <div id="resumen-carrito" class="carrito__container">
+      <!-- JS inserta productos aquí -->
+    </div>
 
-    <div class="carrito-footer">
-      <h2 id="total" class="total-carrito"></h2>
+    <!-- TOTAL -->
+    <div class="carrito__resumen">
+      <h2 id="total">Total: $0</h2>
+    </div>
 
-      <a href="formulario.html" class="btn-finalizar">
-        Finalizar compra
-      </a>
+    <!-- FORMULARIO -->
+    <div class="checkout">
+
+      <h2 class="checkout__title">Datos de Envío</h2>
+
+      <form onsubmit="enviarPedido(event)" class="checkout__form">
+
+        <div class="form-group">
+          <input type="text" id="nombre" placeholder="Nombre" required>
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="apellido" placeholder="Apellido" required>
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="direccion" placeholder="Dirección" required>
+        </div>
+
+        <div class="form-group">
+          <input type="email" id="correo" placeholder="Correo electrónico" required>
+        </div>
+
+        <div class="form-group">
+          <select id="pago" required>
+            <option value="">Método de pago</option>
+            <option value="Transferencia">Transferencia</option>
+            <option value="Efectivo">Efectivo</option>
+            <option value="Tarjeta">Tarjeta</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-primary">
+          Finalizar compra 
+        </button>
+
+      </form>
+
     </div>
 
   </section>
 
-  <script src="../assets/js/script.js"></script>
+  <!-- JS -->
+  <script src="../assets/JS/script.js"></script>
+
 </body>
 </html>
