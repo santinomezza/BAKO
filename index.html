@@ -1,421 +1,431 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>BAKO | Streetwear Lifestyle</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gorras streetwear premium. Lifestyle urbano.">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta charset="UTF-8">
+<title>BAKO | Streetwear Lifestyle</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Gorras streetwear premium. Lifestyle urbano.">
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
 </head>
 <body>
 
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <div class="logo">
+    <h1>BAKO</h1>
+  </div>
+  <nav class="nav">
+    <ul>
+      <li class="enlaces-header"><a href="#">DESTACADOS</a></li>
+      <li class="enlaces-header"><a href="#">GORRAS</a></li>
+      <li class="enlaces-header"><a href="#">NOSOTROS</a></li>
+      <li class="enlaces-header"><a href="#">LIFESTYLE</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <!-- HEADER -->
-    <header class="header">
-        <div class="logo">
-            <h1>BAKO</h1>
-        </div>
-
-        <nav class="nav">
-            <ul>
-                <li class="enlaces-header"><a href="#">DESTACADOS</a></li>
-                <li class="enlaces-header"><a href="#">GORRAS</a></li>
-                <li class="enlaces-header"><a href="#">NOSOTROS</a></li>
-                <li class="enlaces-header"><a href="#">LIFESTYLE</a></li>
-            </ul>
-        </nav>
-    </header>
-
+<!-- ================= HERO ================= -->
 <section class="hero">
-<div class="hero-bg"></div>
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <h1 class="hero__title">ELEGI TU CARTA</h1>
+    <p class="hero__subtitle">Más que una gorra. Un estilo de vida.</p>
+    <button class="btn">VER CARTAS</button>
+  </div>
+  <div class="hero-card">
+    <img src="assets/img/caja-de-cartas.png" alt="Producto principal">
+  </div>
+</section>
 
-    <div class="hero-content">
-        <h1 class="hero__title">ELEGI TU CARTA</h1>
-        <p class="hero__subtitle">Mas que una gorra. Un estilo de vida.</p>
-        <button class="btn">VER CARTAS</button>
-    </div>
 
-    <div class="hero-card">
-        <img src="/assets/img/caja-de-cartas.png" alt="Gorra principal">
-    </div>
-
-</section>  
 
     <!-- CATEGORÍAS -->
     <section class="categories">
         <div class="category">DESTACADOS</div>
-        <div class="category">GORRAS</div>
+        <div class="category">COLECCION</div>
         <div class="category">NOSOTROS</div>
-        <div class="category">LIFESTYLE</div>
+        <div class="category">CONTACTO</div>
     </section>
 
 
 
-<!-- DESTACADOS -->
+
+<!-- ================= DESTACADOS ================= -->
 <section class="destacados">
-    <h2 class="titulo-catalogo">PRODUCTOS DESTACADOS</h2>
+  <h2 class="titulo-catalogo">PRODUCTOS DESTACADOS</h2>
+  <div class="grid-catalogo">
 
-    <div class="grid-catalogo">
+    <div class="card-producto">
+      <div class="imagenes-producto">
+        <img src="assets/img/card2.png" class="imagen-principal" id="img-d1">
+          <div class="miniaturas">
+            <img src="assets/img/card1.png" onclick="cambiarImagen(this, 'prod1')">
+            <img src="assets/img/card2.png" onclick="cambiarImagen(this, 'prod1')">
+            <img src="assets/img/card3.png" onclick="cambiarImagen(this, 'prod1')">
+          </div>
+      </div>
 
-        <!-- Producto Destacado 1 -->
-        <div class="card-producto" id="cantidad-prod">
+      <div class="info">
+        <h3>BAKO Cap Classic</h3>
+        <p>$25.000</p>
 
-            <div class="imagenes-producto">
-                <img src="assets/img/card2.png" class="imagen-principal">
-
-                <div class="miniaturas">
-                    <img src="assets/img/card2.png">
-                    <img src="assets/img/card3.png">
-                </div>
-            </div>
-
-        <div class="info">
-            <h3>BAKO Cap Classic</h3>
-            <p>$25.000</p>
-            <div class="cantidad">
-                <label for="cantidad1">Cantidad:</label>
-                <input type="number" id="cantidad1" min="1" value="1">
+        <div class="cantidad">
+          <input type="number" id="cantidad-d1" min="1" value="1">
         </div>
+
         <div class="boton-comprar">
-          <button onclick="agregarAlCarrito('prod1', 25000, 'Cantidad 1')">
-            Añadir al Carrito
+          <button onclick="agregarAlCarrito('BAKO Cap Classic',25000,'cantidad-d1')">
+            Añadir al carrito
           </button>
         </div>
       </div>
-
-        </div>
-
-
-        <!-- Producto Destacado 2 -->
-        <div class="card-producto">
-
-            <div class="imagenes-producto">
-                <img src="assets/img/card2.png" class="imagen-principal">
-
-                <div class="miniaturas">
-                    <img src="assets/img/card2.png">
-                    <img src="assets/img/card3.png">
-                </div>
-            </div>
-
-            <div class="info">
-                <h3>BAKO Cap Urban</h3>
-                <p>$38.000</p>
-                <div class="boton-comprar">
-                    <a 
-                        href="https://wa.me/5493511234567?text=Hola%20BAKO!!%0A%0A🧾%20NUEVO%20PEDIDO%0A%0AProducto:%20BAKO%20CAP%20URBAN%0APrecio:%20$38.000%0A%0AQuiero%20comprar%20este%20producto."
-                        target="_blank"
-                        class="btn-whatsapp">
-                        Comprar
-                    </a>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="card-producto">
-
-            <div class="imagenes-producto">
-                <img src="assets/img/card2.png" class="imagen-principal">
-
-                <div class="miniaturas">
-                    <img src="assets/img/card2.png">
-                    <img src="assets/img/card3.png">
-                </div>
-            </div>
-
-            <div class="info">
-                <h3>BAKO Cap Urban</h3>
-                <p>$38.000</p>
-                <div class="boton-comprar">
-                    <a 
-                        href="https://wa.me/5493511234567?text=Hola%20BAKO!!%0A%0A🧾%20NUEVO%20PEDIDO%0A%0AProducto:%20BAKO%20CAP%20URBAN%0APrecio:%20$38.000%0A%0AQuiero%20comprar%20este%20producto."
-                        target="_blank"
-                        class="btn-whatsapp">
-                        Comprar
-                    </a>
-                </div>
-            </div>
-
-        </div>
-
-
     </div>
+
+        <div class="card-producto">
+      <div class="imagenes-producto">
+        <img src="assets/img/card2.png" class="imagen-principal" id="img-d1">
+      </div>
+      <div class="info">
+        <h3>BAKO Cap Classic</h3>
+        <p>$25.000</p>
+
+        <div class="cantidad">
+          <input type="number" id="cantidad-d2" min="1" value="1">
+        </div>
+
+        <div class="boton-comprar">
+          <button onclick="agregarAlCarrito('BAKO Cap Classic',25000,'cantidad-d2')">
+            Añadir al carrito
+          </button>
+        </div>
+      </div>
+    </div>
+
+        <div class="card-producto">
+      <div class="imagenes-producto">
+        <img src="assets/img/card2.png" class="imagen-principal" id="img-d1">
+      </div>
+      <div class="info">
+        <h3>BAKO Cap Classic</h3>
+        <p>$25.000</p>
+
+        <div class="cantidad">
+          <input type="number" id="cantidad-d3" min="1" value="1">
+        </div>
+
+        <div class="boton-comprar">
+          <button onclick="agregarAlCarrito('BAKO Cap Classic',25000,'cantidad-d3')">
+            Añadir al carrito
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<div id="boton-finalizar" class="oculto">
-  <button onclick="irAFormulario()">Finalizar Compra</button>
-</div>
 
 
 
-    <section class="lifestyle-banner">
-        <div class="banner-text">
-            <h2>LIFESTYLE COLLECTION</h2>
-            <p>Más que una gorra es una onda para afrontar la vida</p>
-        </div>
-    </section>
 
-
+<!-- ================= CATALOGO ================= -->
 
 
 
 
 <section class="catalogo">
+<h2 class="titulo-catalogo">BAKO COLLECTION</h2>
 
-  <h2 class="titulo-catalogo">BAKO COLLECTION</h2>
+<div class="grid-catalogo">
 
-  <div class="grid-catalogo">
-    <!-- PRODUCTO 1 -->
-    <div class="card-producto">
-      <div class="imagen-container">
-        <img src="/assets/img/card1.png" class="imagen-principal" id="prod1">
-
-        <div class="miniaturas">
-          <img src="/assets/img/card1.png" onclick="cambiarImagen(this,'prod1')">
-          <img src="/assets/img/card2.png" onclick="cambiarImagen(this,'prod1')">
-          <img src="/assets/img/card3.png" onclick="cambiarImagen(this,'prod1')">
-        </div>
+  <div class="card-producto">
+      <div class="imagenes-producto">
+        <img src="assets/img/card2.png" class="imagen-principal" id="img-d1">
       </div>
-
       <div class="info">
         <h3>BAKO Cap Classic</h3>
         <p>$25.000</p>
+
+        <div class="cantidad">
+          <input type="number" id="cantidad-1" min="1" value="1">
+        </div>
+
         <div class="boton-comprar">
-          <a 
-            href="https://wa.me/5493511234567?text=Hola%20BAKO!!%0A%0A🧾%20NUEVO%20PEDIDO%0A%0AProducto:%20BAKO%20CAP%0APrecio:%20$25.000%0A%0AQuiero%20comprar%20este%20producto."
-            target="_blank"
-            class="btn-whatsapp">Comprar
-          </a>
+          <button onclick="agregarAlCarrito('BAKO Cap Classic',25000,'cantidad-1')">
+            Añadir al carrito
+          </button>
         </div>
       </div>
     </div>
 
-    <!-- PRODUCTO 2 -->
-    <div class="card-producto">
-      <div class="imagen-container">
-        <img src="/assets/img/card4.png" class="imagen-principal" id="prod2">
-
-        <div class="miniaturas">
-          <img src="/assets/img/card1.png" onclick="cambiarImagen(this,'prod2')">
-          <img src="/assets/img/card2.png" onclick="cambiarImagen(this,'prod2')">
-          <img src="/assets/img/card3.png" onclick="cambiarImagen(this,'prod2')">
-        </div>
+        <div class="card-producto">
+      <div class="imagenes-producto">
+        <img src="assets/img/card2.png" class="imagen-principal" id="img-d1">
       </div>
-
-      <div class="info">
-        <h3>BAKO Hoodie Black</h3>
-        <p>$65.000</p>
-        <div class="boton-comprar">
-          <a 
-            href="https://wa.me/5493511234567?text=Hola%20BAKO!!%0A%0A🧾%20NUEVO%20PEDIDO%0A%0AProducto:%20BAKO%20HOODIE%0APrecio:%20$65.000%0A%0AQuiero%20comprar%20este%20producto."
-            target="_blank"
-            class="btn-whatsapp">Comprar
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- PRODUCTO 3 -->
-    <div class="card-producto">
-      <div class="imagen-container">
-        <img src="/assets/img/card1.png" class="imagen-principal" id="prod3">
-
-        <div class="miniaturas">
-          <img src="/assets/img/card1.png" onclick="cambiarImagen(this,'prod3')">
-          <img src="/assets/img/card2.png" onclick="cambiarImagen(this,'prod3')">
-          <img src="/assets/img/card3.png" onclick="cambiarImagen(this,'prod3')">
-        </div>
-      </div>
-
-      <div class="info">
-        <h3>BAKO Tee White</h3>
-        <p>$35.000</p>
-        <div class="boton-comprar">
-          <a 
-            href="https://wa.me/5493511234567?text=Hola%20BAKO!!%0A%0A🧾%20NUEVO%20PEDIDO%0A%0AProducto:%20BAKO%20TEE%0APrecio:%20$35.000%0A%0AQuiero%20comprar%20este%20producto."
-            target="_blank"
-            class="btn-whatsapp">Comprar
-          </a>
-        </div>
-      </div>
-    </div>
-
-
-<!-- PRODUCTO 1 -->
-    <div class="card-producto">
-      <div class="imagen-container">
-        <img src="/assets/img/card1.png" class="imagen-principal" id="prod4">
-
-        <div class="miniaturas">
-          <img src="/assets/img/card1.png" onclick="cambiarImagen(this,'prod1')">
-          <img src="/assets/img/card2.png" onclick="cambiarImagen(this,'prod1')">
-          <img src="/assets/img/card3.png" onclick="cambiarImagen(this,'prod1')">
-        </div>
-      </div>
-
       <div class="info">
         <h3>BAKO Cap Classic</h3>
         <p>$25.000</p>
+
+        <div class="cantidad">
+          <input type="number" id="cantidad-2" min="1" value="1">
+        </div>
+
         <div class="boton-comprar">
-          <a 
-            href="https://wa.me/5493511234567?text=Hola%20BAKO!!%0A%0A🧾%20NUEVO%20PEDIDO%0A%0AProducto:%20BAKO%20CAP%0APrecio:%20$25.000%0A%0AQuiero%20comprar%20este%20producto."
-            target="_blank"
-            class="btn-whatsapp">Comprar
-          </a>
+          <button onclick="agregarAlCarrito('BAKO Cap Classic',25000,'cantidad-2')">
+            Añadir al carrito
+          </button>
         </div>
       </div>
     </div>
 
-    <!-- PRODUCTO 2 -->
-    <div class="card-producto">
-      <div class="imagen-container">
-        <img src="/assets/img/card4.png" class="imagen-principal" id="prod2">
-
-        <div class="miniaturas">
-          <img src="/assets/img/card1.png" onclick="cambiarImagen(this,'prod2')">
-          <img src="/assets/img/card2.png" onclick="cambiarImagen(this,'prod2')">
-          <img src="/assets/img/card3.png" onclick="cambiarImagen(this,'prod2')">
-        </div>
+        <div class="card-producto">
+      <div class="imagenes-producto">
+        <img src="assets/img/card2.png" class="imagen-principal" id="img-d1">
       </div>
-
       <div class="info">
-        <h3>BAKO Hoodie Black</h3>
-        <p>$65.000</p>
+        <h3>BAKO Cap Classic</h3>
+        <p>$25.000</p>
+
+        <div class="cantidad">
+          <input type="number" id="cantidad-3" min="1" value="1">
+        </div>
+
         <div class="boton-comprar">
-          <a 
-            href="https://wa.me/5493511234567?text=Hola%20BAKO!!%0A%0A🧾%20NUEVO%20PEDIDO%0A%0AProducto:%20BAKO%20HOODIE%0APrecio:%20$65.000%0A%0AQuiero%20comprar%20este%20producto."
-            target="_blank"
-            class="btn-whatsapp">Comprar
-          </a>
+          <button onclick="agregarAlCarrito('BAKO Cap Classic',25000,'cantidad-3')">
+            Añadir al carrito
+          </button>
         </div>
       </div>
     </div>
 
-    <!-- PRODUCTO 3 -->
-    <div class="card-producto">
-      <div class="imagen-container">
-        <img src="/assets/img/card1.png" class="imagen-principal" id="prod3">
-
-        <div class="miniaturas">
-          <img src="/assets/img/card1.png" onclick="cambiarImagen(this,'prod3')">
-          <img src="/assets/img/card2.png" onclick="cambiarImagen(this,'prod3')">
-          <img src="/assets/img/card3.png" onclick="cambiarImagen(this,'prod3')">
-        </div>
+<div class="card-producto">
+      <div class="imagenes-producto">
+        <img src="assets/img/card2.png" class="imagen-principal" id="img-d1">
       </div>
-
       <div class="info">
-        <h3>BAKO Tee White</h3>
-        <p>$35.000</p>
+        <h3>BAKO Cap Classic</h3>
+        <p>$25.000</p>
+
+        <div class="cantidad">
+          <input type="number" id="cantidad-1" min="1" value="1">
+        </div>
+
         <div class="boton-comprar">
-          <a 
-            href="https://wa.me/5493511234567?text=Hola%20BAKO!!%0A%0A🧾%20NUEVO%20PEDIDO%0A%0AProducto:%20BAKO%20TEE%0APrecio:%20$35.000%0A%0AQuiero%20comprar%20este%20producto."
-            target="_blank"
-            class="btn-whatsapp">Comprar
-          </a>
+          <button onclick="agregarAlCarrito('BAKO Cap Classic',25000,'cantidad-1')">
+            Añadir al carrito
+          </button>
         </div>
       </div>
     </div>
 
+        <div class="card-producto">
+      <div class="imagenes-producto">
+        <img src="assets/img/card2.png" class="imagen-principal" id="img-d1">
+      </div>
+      <div class="info">
+        <h3>BAKO Cap Classic</h3>
+        <p>$25.000</p>
 
-  </div>
-    
+        <div class="cantidad">
+          <input type="number" id="cantidad-2" min="1" value="1">
+        </div>
+
+        <div class="boton-comprar">
+          <button onclick="agregarAlCarrito('BAKO Cap Classic',25000,'cantidad-2')">
+            Añadir al carrito
+          </button>
+        </div>
+      </div>
+    </div>
+
+        <div class="card-producto">
+      <div class="imagenes-producto">
+        <img src="assets/img/card2.png" class="imagen-principal" id="img-d1">
+      </div>
+      <div class="info">
+        <h3>BAKO Cap Classic</h3>
+        <p>$25.000</p>
+
+        <div class="cantidad">
+          <input type="number" id="cantidad-3" min="1" value="1">
+        </div>
+
+        <div class="boton-comprar">
+          <button onclick="agregarAlCarrito('BAKO Cap Classic',25000,'cantidad-3')">
+            Añadir al carrito
+          </button>
+        </div>
+      </div>
+    </div>
+
+</div>
+</section>
+
+
+<!-- ================= NOSOTROS ================= -->
+
+<section class="nosotros">
+  <div class="nosotros-container">
+
+    <div class="nosotros-texto">
+      <h2>Sobre BAKO</h2>
+
+      <p>
+        Holaaa! Somos Rami y Coti, los creadores de este proyecto.
+        Esto nació entre charlas, ideas sueltas y muchas ganas de hacer algo que nos represente.
+        BAKO no es solo un emprendimiento de gorras, es nuestra forma de crear algo distinto, de compartir momentos, estilo y lo que somos ✨      
+        Nos gusta pensar que somos los Jokers de la baraja 🃏 Porque vinimos a mezclar, a jugar y a hacer las cosas a nuestra manera.
+        Gracias por estar acá, esto recién arranca
+      </p>
+
+      <p>
+        No queríamos solo vender gorras: queríamos crear identidad.
+        Cada diseño representa actitud, autenticidad y la determinación 
+        de quienes se animan a marcar su propio camino.
+      </p>
+
+      <p class="firma">— Rami y Coti</p>
+    </div>
+
+    <div class="nosotros-imagen">
+      <img src="assets/img/rami-coti.jpeg" alt="Fundadores de Bako">
+    </div>
 
   </div>
 </section>
 
-<section id="nosotros">
-  <h2>Seguinos</h2>
 
-  <div class="social-card">
 
-    <a href="https://www.instagram.com/TUUSUARIO" target="_blank" class="social-btn instagram">
-      <i class="fab fa-instagram"></i>
-      <span>Instagram</span>
-    </a>
+<footer class="footer">
 
-    <a href="https://www.tiktok.com/@TUUSUARIO" target="_blank" class="social-btn tiktok">
-      <i class="fab fa-tiktok"></i>
-      <span>TikTokeee</span>
-    </a>
+  <div class="footer-container">
 
-    <a href="https://wa.me/549XXXXXXXXXX" target="_blank" class="social-btn whatsapp">
+    <!-- Marca -->
+    <div class="footer-col">
+      <h3 class="footer-logo">BAKO</h3>
+      <p>
+        Streetwear auténtico para quienes viven con actitud.
+        No vendemos gorras. Creamos identidad.
+      </p>
+    </div>
+
+    <!-- Navegación -->
+    <div class="footer-col">
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Lifestyle</a></li>
+      </ul>
+    </div>
+
+    <!-- Contacto -->
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <p>Cordoba, Argentina</p>
+      <p>Email: bakolifestyle@gmail.com</p>
+      <p>WhatsApp: +54 9 3518 65-1885</p>
+    </div>
+
+    <!-- Redes -->
+    <div class="footer-col">
+      <h4>Seguinos</h4>
+      <div class="footer-social">
+        <a href="https://instagram.com/bako.lifestyle"><i class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com/@bako.lifestyle"><i class="fab fa-tiktok"></i></a>
+        <a href="https://open.spotify.com/playlist/6Sb7OmUrccHrQIfGnsbW7U?si=PkEQZINDQvqJOHBXEtzkaw&pi=kZcwNA92S56DQ"><i class="fab fa-spotify"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 WEM-BOOST. Todos los derechos reservados.</p>
+  </div>
+
+</footer>
+
+
+
+
+
+<!-- ================= BOTON WHATSAPP INSTAGRAM TIKTOK SPOTIFY================= -->
+
+<div class="social-fixed">
+    <a href="https://wa.me/5493518651885" target="_blank" class="btn-social whatsapp">
       <i class="fab fa-whatsapp"></i>
-      <span>WhatsApp</span>
     </a>
-
-  </div>
-</section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-columns">
-
-            <div>
-                <h4>SHOP</h4>
-                <ul>
-                    <li><a href="#">Novedades</a></li>
-                    <li><a href="#">Gorras</a></li>
-                    <li><a href="#">Colecciones</a></li>
-                    <li><a href="#">Sale</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4>AYUDA</h4>
-                <ul>
-                    <li><a href="#">Envíos</a></li>
-                    <li><a href="#">Cambios y devoluciones</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4>MARCA</h4>
-                <ul>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Stores</a></li>
-                    <li><a href="#">Prensa</a></li>
-                </ul>
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-            <p>© 2026 URBAN CAPS. All Rights Reserved.</p>
-        </div>
-    </footer>
+    <a href="https://instagram.com/bako.lifestyle" target="_blank" class="btn-social instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://tiktok.com/@bako.lifestyle" target="_blank" class="btn-social tiktok">
+      <i class="fab fa-tiktok"></i>
+    </a>
+    <a href="https://open.spotify.com/playlist/6Sb7OmUrccHrQIfGnsbW7U?si=PkEQZINDQvqJOHBXEtzkaw&pi=kZcwNA92S56DQ" target="_blank" class="btn-social spotify">
+      <i class="fab fa-spotify"></i>
+    </a>
+</div>
 
 
+<!-- ================= BOTON FINALIZAR ================= -->
+<div id="boton-finalizar" style="display:none;">
+  <a href="/pages/carrito.html" class="btn-carrito">
+    Carrito 🛒
+  </a>
+</div>
 
 
+<!-- ================= SCRIPT CARRITO ================= -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
 
-  const productos = document.querySelectorAll(".producto");
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-  productos.forEach(producto => {
+// Mostrar botón si ya hay productos guardados
+if (carrito.length > 0) {
+  document.getElementById("boton-finalizar").style.display = "block";
+}
 
-    const principal = producto.querySelector(".imagen-principal");
-    const miniaturas = producto.querySelectorAll(".miniaturas img");
+function agregarAlCarrito(nombre, precio, idCantidad) {
 
-    miniaturas.forEach(img => {
-      img.addEventListener("click", function() {
-        principal.src = this.src;
-      });
+  const cantidad = parseInt(document.getElementById(idCantidad).value);
+
+  if (!cantidad || cantidad <= 0) return;
+
+  const productoExistente = carrito.find(p => p.nombre === nombre);
+
+  if (productoExistente) {
+    productoExistente.cantidad += cantidad;
+  } else {
+    carrito.push({
+      nombre: nombre,
+      precio: precio,
+      cantidad: cantidad
     });
+  }
 
-  });
+  localStorage.setItem("carrito", JSON.stringify(carrito));
 
-});
+  document.getElementById("boton-finalizar").style.display = "block";
+
+  alert("Producto añadido al carrito 🛒");
+}
+
+function irAFormulario() {
+  window.location.href = "pages/formulario.html";
+}
 </script>
+
 <script>
 function cambiarImagen(img, idPrincipal) {
   document.getElementById(idPrincipal).src = img.src;
 }
 </script>
 
+<script src="assets/js/script.js"></script>
 </body>
 </html>

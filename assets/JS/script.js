@@ -54,12 +54,6 @@ console.log(carrito);
 
 
 
-
-
-
-
-
-
 function enviarPedido(event) {
     event.preventDefault();
 
@@ -96,3 +90,42 @@ function enviarPedido(event) {
     window.open(url, "_blank");
 }
 
+function agregarAlCarrito(nombre, precio) {
+  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+  carrito.push({
+    nombre: nombre,
+    precio: precio
+  });
+
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+
+  alert("Producto agregado al carrito 🛒");
+}
+
+
+function mostrarCarrito() {
+  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  let contenedor = document.getElementById("resumen-carrito");
+  let totalElemento = document.getElementById("total");
+
+  if (!contenedor) return;
+
+  contenedor.innerHTML = "";
+  let total = 0;
+
+  carrito.forEach((producto, index) => {
+    total += producto.precio;
+
+    contenedor.innerHTML += `
+      <div class="item-carrito">
+        <p>${producto.nombre}</p>
+        <p>$${producto.precio}</p>
+      </div>
+    `;
+  });
+
+  totalElemento.innerText = "Total: $" + total;
+}
+
+document.addEventListener("DOMContentLoaded", mostrarCarrito);

@@ -1,75 +1,54 @@
-#nosotros {
-  text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #000, #111);
-  color: white;
-}
-
-#nosotros h2 {
-  font-size: 40px;
-  margin-bottom: 40px;
-  letter-spacing: 3px;
-}
-
-.social-card {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.social-btn {
+.nosotros {
+  width: 100%;
+  min-height: 90vh;
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 18px 30px;
-  border-radius: 50px;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
+  background: $beige;
+  padding: 80px 10%;
 }
 
-/* Instagram */
-.instagram {
-  background: linear-gradient(45deg, #feda75, #d62976, #962fbf);
+.nosotros-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* TikTok */
-.tiktok {
-  background: linear-gradient(45deg, #25f4ee, #fe2c55);
+.nosotros-texto {
+  width: 50%;
+  padding-left: 8%;
+  color: #000000;
+
+  h2 {
+    font-size: 4rem;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+  }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #000000;
+  }
+
+  .firma {
+    margin-top: 30px;
+    font-weight: bold;
+    color: #000000;
+  }
 }
 
-/* WhatsApp */
-.whatsapp {
-  background: linear-gradient(45deg, #25D366, #128C7E);
-}
-
-.social-btn i {
-  font-size: 22px;
-}
-
-/* Hover efecto glow */
-.social-btn:hover {
-  transform: translateY(-8px) scale(1.05);
-  box-shadow: 0 15px 35px rgb(255, 0, 0);
-}
-
-/* Efecto animación suave */
-.social-btn::before {
-  content: "";
-  position: absolute;
-  width: 120%;
+.nosotros-imagen {
+  width: 50%;
   height: 100%;
-  background: rgb(238, 7, 7);
-  top: 0;
-  left: -120%;
-  transition: 0.6s;
-}
+  display: flex;
+  justify-content: flex-end;
 
-.social-btn:hover::before {
-  left: 100%;
+  img {
+    width: 90%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
 }

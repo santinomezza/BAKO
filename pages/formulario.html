@@ -10,24 +10,25 @@
     
 
 <h2>FINALIZAR COMPRA</h2>
-    <form onsubmit="enviarPedido(event)">
-        <input type="text" id="nombre" placeholder="Nombre" required>
-        <input type="text" id="apellido" placeholder="Apellido" required>
-        <input type="text" name="direccion" id="direccion" placeholder="Dirección" required>
-        <input type="email" name="email" id="email" placeholder="Email" required>
+<form id="formulario-compra">
 
-        <select  id="pago" required>
-            <option value="Metodo de pago"></option>
-            <option >Transferencia</option>
-            <option >Efectivo</option>
-        </select>
+  <!-- Datos ocultos que vienen del producto -->
+  <input type="hidden" id="producto" name="producto">
+  <input type="hidden" id="cantidad" name="cantidad">
 
-<button type="submit">Finalizar compra por whatsApp</button>
+  <h2>Finalizar compra</h2>
+
+  <input type="text" id="nombre" placeholder="Nombre completo" required>
+  <input type="email" id="email" placeholder="Email" required>
+  <input type="text" id="telefono" placeholder="Teléfono" required>
+  <input type="text" id="direccion" placeholder="Dirección de envío" required>
+
+
+  <button type="submit" class="btn-finalizar">
+    Confirmar pedido
+  </button>
 
 </form>
-
-
-
 
 
 

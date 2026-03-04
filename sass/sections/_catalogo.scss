@@ -23,6 +23,10 @@
 /* CARD */
 .card-producto {
   background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
 }
 
 /* IMAGEN PRINCIPAL FULL */
@@ -116,9 +120,11 @@
 .destacados {
     padding: 80px 5%;
     background: linear-gradient(180deg, #252424 0%, #3a3535 100%);
+    color: white;
 }
 
 .destacados .titulo-catalogo {
     text-align: center;
     margin-bottom: 50px;
+    color: white;
 }
