@@ -11,18 +11,61 @@
 
 <body>
 <header class="header">
+
+  <!-- LOGO -->
   <div class="logo">
-    <h1><a href="index.html">BAKO</a></h1>
+    <a href="/index.html">BAKO</a>
   </div>
-  <nav class="nav">
-    <ul>
-      <li class="enlaces-header"><a href="../index.html#destacados">DESTACADOS</a></li>
-      <li class="enlaces-header"><a href="../index.html#catalogo">GORRAS</a></li>
-      <li class="enlaces-header"><a href="../index.html#nosotros">NOSOTROS</a></li>
-      <li class="enlaces-header"><a href="contacto.html">CONTACTO</a></li>
+
+  <!-- BOTON HAMBURGUESA (mobile) -->
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- MENU -->
+  <nav class="nav" id="nav">
+
+    <!-- BOTON CERRAR -->
+    <div class="menu-close" id="menu-close">
+      <i class="fas fa-xmark"></i>
+    </div>
+
+    <ul class="nav-links">
+
+      <li class="enlaces-header">
+        <a href="/index.html#destacados">DESTACADOS</a>
+      </li>
+
+      <li class="enlaces-header">
+        <a href="/index.html#catalogo">GORRAS</a>
+      </li>
+
+      <li class="enlaces-header">
+        <a href="/index.html#nosotros">NOSOTROS</a>
+      </li>
+
+      <li class="enlaces-header">
+        <a href="/pages/contacto.html">CONTACTO</a>
+      </li>
+
     </ul>
+
   </nav>
+
+  <!-- CARRITO (SIEMPRE VISIBLE) -->
+  <a href="/pages/carrito.html" class="btn-cart" data-quantity="0">
+
+    <svg class="icon-cart" viewBox="0 0 24 24">
+      <path d="M7 4H3L2 6H4L7 14H17L20 8H6"/>
+      <path d="M7 14L5.5 17H19"/>
+      <circle cx="9" cy="20" r="1.5"/>
+      <circle cx="17" cy="20" r="1.5"/>
+    </svg>
+
+  </a>
+
 </header>
+
 
   <section class="carrito">
 
@@ -79,7 +122,55 @@
     </div>
 
   </section>
+<footer class="footer">
 
+  <div class="footer-container">
+
+    <!-- Marca -->
+    <div class="footer-col">
+      <h3 class="footer-logo">BAKO</h3>
+      <p>
+        Streetwear auténtico para quienes viven con actitud.
+        No vendemos gorras. Creamos identidad.
+      </p>
+    </div>
+
+    <!-- Navegación -->
+    <div class="footer-col">
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Lifestyle</a></li>
+      </ul>
+    </div>
+
+    <!-- Contacto -->
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <p>Cordoba, Argentina</p>
+      <p>Email: bakolifestyle@gmail.com</p>
+      <p>WhatsApp: +54 9 3518 65-1885</p>
+    </div>
+
+    <!-- Redes -->
+    <div class="footer-col">
+      <h4>Seguinos</h4>
+      <div class="footer-social">
+        <a href="https://instagram.com/bako.lifestyle"><i class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com/@bako.lifestyle"><i class="fab fa-tiktok"></i></a>
+        <a href="https://open.spotify.com/playlist/6Sb7OmUrccHrQIfGnsbW7U?si=PkEQZINDQvqJOHBXEtzkaw&pi=kZcwNA92S56DQ"><i class="fab fa-spotify"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 WEM-BOOST. Todos los derechos reservados.</p>
+  </div>
+
+</footer>
   <!-- JS -->
   <script src="../assets/JS/script.js"></script>
 

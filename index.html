@@ -12,17 +12,19 @@
 
 </head>
 <body>
-
-<!-- ================= HEADER ================= -->
 <header class="header">
 
-  <div class="logo">BAKO</div>
+  <!-- LOGO -->
+  <div class="logo">
+    <a href="/index.html">BAKO</a>
+  </div>
 
-  <!-- BOTON HAMBURGUESA -->
+  <!-- BOTON HAMBURGUESA (mobile) -->
   <div class="menu-toggle" id="menu-toggle">
     <i class="fas fa-bars"></i>
   </div>
 
+  <!-- MENU -->
   <nav class="nav" id="nav">
 
     <!-- BOTON CERRAR -->
@@ -30,15 +32,39 @@
       <i class="fas fa-xmark"></i>
     </div>
 
-    <ul class="nav-list">
-      <li class="enlaces-header"><a href="#destacados">DESTACADOS</a></li>
-      <li class="enlaces-header"><a href="#catalogo">GORRAS</a></li>
-      <li class="enlaces-header"><a href="#nosotros">NOSOTROS</a></li>
-      <li class="enlaces-header"><a href="/pages/contacto.html">CONTACTO</a></li>
-      <li class="enlaces-header"><a href="/pages/carrito.html">CARRITO 🛒</a></li>
+    <ul class="nav-links">
+
+      <li class="enlaces-header">
+        <a href="/index.html#destacados">DESTACADOS</a>
+      </li>
+
+      <li class="enlaces-header">
+        <a href="/index.html#catalogo">GORRAS</a>
+      </li>
+
+      <li class="enlaces-header">
+        <a href="/index.html#nosotros">NOSOTROS</a>
+      </li>
+
+      <li class="enlaces-header">
+        <a href="/pages/contacto.html">CONTACTO</a>
+      </li>
+
     </ul>
 
   </nav>
+
+  <!-- CARRITO (SIEMPRE VISIBLE) -->
+  <a href="/pages/carrito.html" class="btn-cart" data-quantity="0">
+
+    <svg class="icon-cart" viewBox="0 0 24 24">
+      <path d="M7 4H3L2 6H4L7 14H17L20 8H6"/>
+      <path d="M7 14L5.5 17H19"/>
+      <circle cx="9" cy="20" r="1.5"/>
+      <circle cx="17" cy="20" r="1.5"/>
+    </svg>
+
+  </a>
 
 </header>
 
@@ -62,10 +88,10 @@
 
     <!-- CATEGORÍAS -->
     <section class="categories">
-        <div class="category">DESTACADOS</div>
-        <div class="category">COLECCION</div>
-        <div class="category">NOSOTROS</div>
-        <div class="category">CONTACTO</div>
+        <div class="category" href="#destacados">DESTACADOS</div>
+        <div class="category" href="#catalogo">COLECCION</div>
+        <div class="category" href="#nosotros">NOSOTROS</div>
+        <div class="category" href="/pages/contacto.html">CONTACTO</div>
     </section>
 
 

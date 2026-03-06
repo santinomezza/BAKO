@@ -14,10 +14,11 @@
 /* TITULO */
 .carrito__title {
   font-size: 32px;
-  margin-bottom: 40px;
+  margin: 50px;
   letter-spacing: 2px;
-  color: white;
+  color: rgb(255, 255, 255);
   animation: fadeDown 0.8s ease;
+  text-decoration: underline;
 }
 
 /* CONTENEDOR */
