@@ -1,6 +1,7 @@
 @import "base/variables";
 @import "base/reset";
 @import "base/global";
+@import "base/menuHamburguesa";
 
 @import "components/buttons";
 @import "components/cards";
@@ -18,17 +19,4 @@
 @import "sections/contacto";
 @import "sections/carrito";
 
-@media (max-width: 900px) {
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-html {
-  scroll-behavior: smooth;
-}
+@import "mobile";

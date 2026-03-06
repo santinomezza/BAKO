@@ -15,18 +15,35 @@
 
 <!-- ================= HEADER ================= -->
 <header class="header">
-  <div class="logo">
-    <h1><a href="index.html">BAKO</a></h1>
+
+  <div class="logo">BAKO</div>
+
+  <!-- BOTON HAMBURGUESA -->
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i>
   </div>
-  <nav class="nav">
-    <ul>
+
+  <nav class="nav" id="nav">
+
+    <!-- BOTON CERRAR -->
+    <div class="menu-close" id="menu-close">
+      <i class="fas fa-xmark"></i>
+    </div>
+
+    <ul class="nav-list">
       <li class="enlaces-header"><a href="#destacados">DESTACADOS</a></li>
       <li class="enlaces-header"><a href="#catalogo">GORRAS</a></li>
       <li class="enlaces-header"><a href="#nosotros">NOSOTROS</a></li>
       <li class="enlaces-header"><a href="/pages/contacto.html">CONTACTO</a></li>
+      <li class="enlaces-header"><a href="/pages/carrito.html">CARRITO 🛒</a></li>
     </ul>
+
   </nav>
+
 </header>
+
+
+
 
 <!-- ================= HERO ================= -->
 <section class="hero">
@@ -34,7 +51,7 @@
   <div class="hero-content">
     <h1 class="hero__title">ELEGI TU CARTA</h1>
     <p class="hero__subtitle">Más que una gorra. Un estilo de vida.</p>
-    <button class="btn">VER CARTAS</button>
+    <a href="#catalogo" class="btn">VER CARTAS</a>
   </div>
   <div class="hero-card">
     <img src="assets/img/caja-de-cartas.png" alt="Producto principal">
@@ -61,11 +78,12 @@
 
     <div class="card-producto">
       <div class="imagenes-producto">
-        <img src="assets/img/CARD-BLACK-AS_HD.png" class="imagen-principal" id="img-d1">
+        <img src="assets/img/CARD-BLACK-AS.png" class="imagen-principal" id="img-d1">
+
           <div class="miniaturas">
-            <img src="assets/img/card1.png" onclick="cambiarImagen(this, 'prod1')">
-            <img src="assets/img/card2.png" onclick="cambiarImagen(this, 'prod1')">
-            <img src="assets/img/card3.png" onclick="cambiarImagen(this, 'prod1')">
+            <img src="assets/img/CARD-BLACK-AS.png" alt="">
+            <img src="assets/img/BLACK-AS-1_ENHANCED.png">
+            <img src="assets/img/BLACK-AS-2_ENHANCED.png">
           </div>
       </div>
 
@@ -87,12 +105,17 @@
 
         <div class="card-producto">
       <div class="imagenes-producto">
-        <img src="assets/img/card2.png" class="imagen-principal" id="img-d1">
+        <img src="assets/img/CARD-BROWN-AS.png" class="imagen-principal" id="img-d2">
+            
+          <div class="miniaturas">
+            <img src="assets/img/CARD-BROWN-AS.png" alt="">
+            <img src="assets/img/BROWN-AS-1_ENHANCED.png">
+            <img src="assets/img/EVERYDAY-2.jpeg">
+          </div>
       </div>
       <div class="info">
         <h3>BAKO Cap Classic</h3>
         <p>$25.000</p>
-
         <div class="cantidad">
           <input type="number" id="cantidad-d2" min="1" value="1">
         </div>
@@ -107,7 +130,13 @@
 
         <div class="card-producto">
       <div class="imagenes-producto">
-        <img src="assets/img/card2.png" class="imagen-principal" id="img-d1">
+        <img src="assets/img/CARD-EVERYDAY.png" class="imagen-principal" id="img-d3">
+
+            <div class="miniaturas">
+            <img src="assets/img/CARD-EVERYDAY.png" alt="">
+            <img src="assets/img/EVERYDAY-1.jpeg">
+            <img src="assets/img/EVERYDAY-2.jpeg">
+          </div>
       </div>
       <div class="info">
         <h3>BAKO Cap Classic</h3>
@@ -144,7 +173,12 @@
 
   <div class="card-producto">
       <div class="imagenes-producto">
-        <img src="assets/img/card2.png" class="imagen-principal" id="img-d1">
+        <img src="assets/img/CARD-GOLDEN.png" class="imagen-principal" id="img-1">
+                  <div class="miniaturas">
+            <img src="assets/img/CARD-GOLDEN.png" alt="">
+            <img src="assets/img/GOLDEN-1.jpeg">
+            <img src="assets/img/EVERYDAY-3.jpeg">
+          </div>
       </div>
       <div class="info">
         <h3>BAKO Cap Classic</h3>
@@ -164,7 +198,11 @@
 
         <div class="card-producto">
       <div class="imagenes-producto">
-        <img src="assets/img/card2.png" class="imagen-principal" id="img-d1">
+        <img src="assets/img/CARD-LABEL_001.png" class="imagen-principal" id="img-2">
+                  <div class="miniaturas">
+            <img src="assets/img/CARD-LABEL_001.png" alt="">
+            <img src="assets/img/LABEL #001-1.jpeg">
+          </div>
       </div>
       <div class="info">
         <h3>BAKO Cap Classic</h3>
@@ -184,7 +222,11 @@
 
         <div class="card-producto">
       <div class="imagenes-producto">
-        <img src="assets/img/card2.png" class="imagen-principal" id="img-d1">
+        <img src="assets/img/CARD-MY-CAP.png" class="imagen-principal" id="img-3">
+                  <div class="miniaturas">
+            <img src="assets/img/CARD-MY-CAP.png" alt="">
+            <img src="assets/img/MY-CAP-1.jpeg">
+          </div>
       </div>
       <div class="info">
         <h3>BAKO Cap Classic</h3>
@@ -204,7 +246,12 @@
 
 <div class="card-producto">
       <div class="imagenes-producto">
-        <img src="assets/img/card2.png" class="imagen-principal" id="img-d1">
+        <img src="assets/img/CARD-PAUSE.png" class="imagen-principal" id="img-4">
+                  <div class="miniaturas">
+            <img src="assets/img/CARD-PAUSE.png" alt="">
+            <img src="assets/img/PAUSE-1.jpeg">
+            <img src="assets/img/EVERYDAY-3.jpeg">
+          </div>
       </div>
       <div class="info">
         <h3>BAKO Cap Classic</h3>
@@ -224,7 +271,11 @@
 
         <div class="card-producto">
       <div class="imagenes-producto">
-        <img src="assets/img/card2.png" class="imagen-principal" id="img-d1">
+        <img src="assets/img/CARD-BLACK-AS.png" class="imagen-principal" id="img-5">
+                  <div class="miniaturas">
+            <img src="assets/img/CARD-BLACK-AS.png" alt="">
+            <img src="assets/img/BLACK-AS-2_ENHANCED.png">
+          </div>
       </div>
       <div class="info">
         <h3>BAKO Cap Classic</h3>
@@ -244,7 +295,12 @@
 
         <div class="card-producto">
       <div class="imagenes-producto">
-        <img src="assets/img/card2.png" class="imagen-principal" id="img-d1">
+        <img src="assets/img/CARD-BROWN-AS.png" class="imagen-principal" id="img-6">
+                  <div class="miniaturas">
+            <img src="assets/img/CARD-BROWN-AS.png" alt="">
+            <img src="assets/img/BROWN-AS-1_ENHANCED.png">
+            <img src="assets/img/EVERYDAY-2.jpeg">
+          </div>
       </div>
       <div class="info">
         <h3>BAKO Cap Classic</h3>
@@ -378,52 +434,6 @@
   </a>
 </div>
 
-
-<!-- ================= SCRIPT CARRITO ================= -->
-<script>
-
-let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
-// Mostrar botón si ya hay productos guardados
-if (carrito.length > 0) {
-  document.getElementById("boton-finalizar").style.display = "block";
-}
-
-function agregarAlCarrito(nombre, precio, idCantidad) {
-
-  const cantidad = parseInt(document.getElementById(idCantidad).value);
-
-  if (!cantidad || cantidad <= 0) return;
-
-  const productoExistente = carrito.find(p => p.nombre === nombre);
-
-  if (productoExistente) {
-    productoExistente.cantidad += cantidad;
-  } else {
-    carrito.push({
-      nombre: nombre,
-      precio: precio,
-      cantidad: cantidad
-    });
-  }
-
-  localStorage.setItem("carrito", JSON.stringify(carrito));
-
-  document.getElementById("boton-finalizar").style.display = "block";
-
-  alert("Producto añadido al carrito 🛒");
-}
-
-function irAFormulario() {
-  window.location.href = "pages/formulario.html";
-}
-</script>
-
-<script>
-function cambiarImagen(img, idPrincipal) {
-  document.getElementById(idPrincipal).src = img.src;
-}
-</script>
 
 <script src="assets/js/script.js"></script>
 </body>

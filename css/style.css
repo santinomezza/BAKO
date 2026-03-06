@@ -23,6 +23,7 @@ a {
 
 body {
   font-family: "Cinzel", serif;
+  background: #000000;
 }
 
 img {
@@ -33,6 +34,13 @@ img {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
 }
 
 .btn-primary {
@@ -59,58 +67,6 @@ a {
 .btn-secondary:hover {
   background: #111111;
   color: white;
-}
-
-.carrito {
-  padding: 100px 5%;
-  background: #111;
-  color: white;
-}
-
-.item-carrito {
-  background: #1a1a1a;
-  padding: 20px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-}
-
-.carrito-total {
-  margin-top: 30px;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-#boton-finalizar {
-  position: fixed;
-  top: 70px;
-  right: 30px;
-  z-index: 1000;
-}
-
-.btn-carrito {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 28px;
-  border-radius: 40px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-decoration: none;
-  color: #fff;
-  /* GLASS EFFECT */
-  background: rgba(0, 0, 0, 0.404);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
-  transition: all 0.3s ease;
-}
-
-/* Hover */
-.btn-carrito:hover {
-  transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
 }
 
 /* Estilo del input de cantidad */
@@ -303,55 +259,37 @@ a {
 }
 
 .header {
-  background: #111111;
-  color: #F3F3F1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 8%;
+  background: #000;
+  color: white;
 }
-.header .logo h1 {
-  font-size: 20px;
-  letter-spacing: 3px;
-  text-decoration: underline;
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
 }
-.header .nav ul {
+
+.nav ul {
   display: flex;
-  gap: 35px;
+  gap: 30px;
+  list-style: none;
 }
-.header .enlaces-header {
+
+.nav a {
   color: white;
   text-decoration: none;
-  border: none;
-  background: none;
-  list-style: none;
-  display: inline-block;
+  font-size: 14px;
 }
-.header .enlaces-header::before {
-  margin-left: auto;
+
+.menu-toggle {
+  display: none;
 }
-.header .enlaces-header::after, .header .enlaces-header::before {
-  content: "";
-  width: 0%;
-  height: 2px;
-  background: #ffffff;
-  display: block;
-  transition: 0.5s;
-}
-.header .enlaces-header:hover::after, .header .enlaces-header:hover::before {
-  width: 100%;
-}
-.header .header-icons {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-.header .header-icons input {
-  padding: 6px 10px;
-  border: none;
-  background: #1F1F1F;
-  color: white;
-  outline: none;
+
+.menu-close {
+  display: none;
 }
 
 .top-bar {
@@ -608,6 +546,7 @@ a {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
+  background-color: #ffffff;
 }
 .categories .category {
   padding: 40px;
@@ -655,8 +594,9 @@ a {
 
 .catalogo {
   padding: 120px 6%;
-  background: #f5f5f5;
+  background: #000000;
   text-align: center;
+  color: white;
 }
 
 .titulo-catalogo {
@@ -664,6 +604,7 @@ a {
   letter-spacing: 5px;
   margin-bottom: 80px;
   font-weight: 500;
+  color: white;
 }
 
 /* GALERÍA 3 POR FILA */
@@ -695,6 +636,7 @@ a {
   object-fit: cover;
   display: block;
   transition: 0.5s ease;
+  border-radius: 10px;
 }
 
 .card-producto:hover .imagen-principal {
@@ -710,12 +652,13 @@ a {
 }
 
 .miniaturas img {
-  width: 65px;
-  height: 65px;
+  width: 60px;
+  height: 60px;
   object-fit: cover;
   cursor: pointer;
-  opacity: 0.6;
-  transition: 0.3s ease;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  transition: 0.3s;
 }
 
 .miniaturas img:hover {
@@ -754,20 +697,6 @@ a {
   transform: translateY(-3px);
 }
 
-/* RESPONSIVE */
-@media (max-width: 992px) {
-  .grid-catalogo {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 576px) {
-  .grid-catalogo {
-    grid-template-columns: 1fr;
-  }
-  .imagen-principal {
-    height: 400px;
-  }
-}
 .destacados {
   padding: 80px 5%;
   background: linear-gradient(180deg, #252424 0%, #3a3535 100%);
@@ -780,55 +709,53 @@ a {
   color: white;
 }
 
+/* ================= NOSOTROS ================= */
 .nosotros {
   width: 100%;
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  background: #D9D2C5;
-  padding: 80px 10%;
+  padding: 80px 20px;
+  background-color: #D9D2C5;
 }
 
 .nosotros-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+}
+
+/* TEXTO */
+.nosotros-texto {
+  max-width: 800px;
+}
+
+.nosotros-texto h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.nosotros-texto p {
+  font-size: 16px;
+  line-height: 1.9em;
+  color: rgb(5, 5, 5);
+}
+
+/* IMAGEN */
+.nosotros-imagen {
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.nosotros-texto {
-  width: 50%;
-  padding-left: 8%;
-  color: #000000;
-}
-.nosotros-texto h2 {
-  font-size: 4rem;
-  margin-bottom: 30px;
-  letter-spacing: 2px;
-}
-.nosotros-texto p {
-  font-size: 1.5rem;
-  line-height: 1.8;
-  margin-bottom: 20px;
-  color: #000000;
-}
-.nosotros-texto .firma {
-  margin-top: 30px;
-  font-weight: bold;
-  color: #000000;
-}
-
-.nosotros-imagen {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
 .nosotros-imagen img {
-  width: 90%;
-  height: 600px;
+  width: 95%;
+  max-width: 900px;
+  height: 90%;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 30px;
 }
 
 /* =========================
@@ -1013,14 +940,6 @@ a {
   box-shadow: 0 10px 10px rgba(0, 202, 61, 0.5);
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 900px) {
-  .contact-container {
-    grid-template-columns: 1fr;
-  }
-}
 /* =========================
    CARRITO MODERNO 2026
 ========================= */
@@ -1216,17 +1135,191 @@ a {
     transform: translateY(0);
   }
 }
-@media (max-width: 900px) {
-  .hero {
+/* ========================= */
+/* MOBILE RESPONSIVE */
+/* ========================= */
+@media (max-width: 768px) {
+  /* ================= HEADER ================= */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #000;
+    z-index: 1000;
+  }
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+  }
+  .logo a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+  }
+  /* BOTON HAMBURGUESA */
+  .menu-toggle {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+    color: white;
+  }
+  /* ================= MENU MOBILE ================= */
+  /* MENU */
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: #000000;
+    transition: 0.4s;
+    padding-top: 80px;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+  }
+  .nav.nav-active {
+    right: 0;
+  }
+  .nav ul {
     flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .nav a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border-bottom: 1px solid #ffffff;
+  }
+  /* BOTON CERRAR */
+  .menu-close {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+  }
+  /* ================= HERO ================= */
+  .hero {
+    margin-top: 60px;
+    height: 100vh;
+    width: 100%;
+    background-image: url("/assets/img/hero-mobile.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .hero-bg {
+    display: none;
+  }
+  .hero-card {
+    display: none;
+  }
+  .hero-content {
     text-align: center;
   }
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .hero__title {
+    font-size: 28px;
+    margin-bottom: 10px;
   }
-}
-html {
-  scroll-behavior: smooth;
+  .hero__subtitle {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  /* ================= CATEGORIAS ================= */
+  .categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0;
+    width: 100%;
+  }
+  .category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+  }
+  /* ================= DESTACADOS ================= */
+  .destacados {
+    padding: 40px 20px;
+  }
+  .grid-catalogo {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  /* ================= PRODUCTOS ================= */
+  .card-producto {
+    width: 100%;
+  }
+  .imagenes-producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .imagen-principal {
+    width: 80%;
+  }
+  .miniaturas {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .miniaturas img {
+    width: 50px;
+    cursor: pointer;
+  }
+  .info {
+    text-align: center;
+  }
+  .info h3 {
+    font-size: 18px;
+  }
+  .info p {
+    font-size: 16px;
+  }
+  .cantidad {
+    margin: 10px 0;
+  }
+  .cantidad input {
+    width: 60px;
+    text-align: center;
+  }
+  /* ================= BOTON COMPRAR ================= */
+  .boton-comprar button {
+    width: 100%;
+    padding: 12px;
+  }
+  /* ================= CATALOGO ================= */
+  .catalogo {
+    padding: 40px 20px;
+  }
+  /* ================= NOSOTROS ================= */
+  /* ================= FOOTER ================= */
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 20px;
+  }
+  /* ================= OCULTAR BOTONES SOCIALES ================= */
+  .social-fixed {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

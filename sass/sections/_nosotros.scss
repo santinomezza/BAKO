@@ -1,54 +1,50 @@
-.nosotros {
-  width: 100%;
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  background: $beige;
-  padding: 80px 10%;
+/* ================= NOSOTROS ================= */
+
+.nosotros{
+  width:100%;
+  padding:80px 20px;
+  background-color: $beige;
 }
 
-.nosotros-container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.nosotros-container{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  gap:40px;
 }
 
-.nosotros-texto {
-  width: 50%;
-  padding-left: 8%;
-  color: #000000;
+/* TEXTO */
 
-  h2 {
-    font-size: 4rem;
-    margin-bottom: 30px;
-    letter-spacing: 2px;
-  }
-
-  p {
-    font-size: 1.5rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: #000000;
-  }
-
-  .firma {
-    margin-top: 30px;
-    font-weight: bold;
-    color: #000000;
-  }
+.nosotros-texto{
+  max-width:800px;
 }
 
-.nosotros-imagen {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
+.nosotros-texto h2{
+  font-size:32px;
+  margin-bottom:20px;
+  text-decoration: underline ;
+}
+.nosotros-texto p{
+  font-size:16px;
+  line-height: 1.9em;
+  color: rgb(5, 5, 5);
+}
 
-  img {
-    width: 90%;
-    height: 600px;
-    object-fit: cover;
-    border-radius: 20px;
-  }
+/* IMAGEN */
+
+.nosotros-imagen{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
+
+.nosotros-imagen img{
+  width: 95%;
+  max-width:900px;
+  height:90%;
+  object-fit:cover;
+  border-radius:30px;
 }

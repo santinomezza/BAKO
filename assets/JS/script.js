@@ -27,6 +27,25 @@ if (viewer && hero) {
   });
 }
 
+
+
+
+
+document.querySelectorAll(".card-producto").forEach(card => {
+
+  const imagenPrincipal = card.querySelector(".imagen-principal");
+  const miniaturas = card.querySelectorAll(".miniaturas img");
+
+  miniaturas.forEach(mini => {
+
+    mini.addEventListener("click", () => {
+      imagenPrincipal.src = mini.src;
+    });
+
+  });
+
+});
+
 // ===============================
 // CARRITO CON LOCALSTORAGE
 // ===============================
@@ -166,4 +185,67 @@ function enviarPedido(event) {
 
 document.addEventListener("DOMContentLoaded", () => {
   mostrarCarrito();
+});
+
+
+
+
+
+
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+// Mostrar botón si ya hay productos guardados
+if (carrito.length > 0) {
+  document.getElementById("boton-finalizar").style.display = "block";
+}
+
+function agregarAlCarrito(nombre, precio, idCantidad) {
+
+  const cantidad = parseInt(document.getElementById(idCantidad).value);
+
+  if (!cantidad || cantidad <= 0) return;
+
+  const productoExistente = carrito.find(p => p.nombre === nombre);
+
+  if (productoExistente) {
+    productoExistente.cantidad += cantidad;
+  } else {
+    carrito.push({
+      nombre: nombre,
+      precio: precio,
+      cantidad: cantidad
+    });
+  }
+
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+
+  document.getElementById("boton-finalizar").style.display = "block";
+
+  alert("Producto añadido al carrito 🛒");
+}
+
+function irAFormulario() {
+  window.location.href = "pages/formulario.html";
+}
+
+function cambiarImagen(img, idPrincipal) {
+  document.getElementById(idPrincipal).src = img.src;
+}
+
+
+
+document.addEventListener("DOMContentLoaded", function(){
+
+const menuToggle = document.getElementById("menu-toggle");
+const menuClose = document.getElementById("menu-close");
+const nav = document.getElementById("nav");
+
+menuToggle.addEventListener("click", () => {
+  nav.classList.add("nav-active");
+});
+
+menuClose.addEventListener("click", () => {
+  nav.classList.remove("nav-active");
+});
+
 });

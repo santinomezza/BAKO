@@ -1,62 +1,33 @@
-
-.header {
-  background: $black;
-  color: $light;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 8%;
-
-  .logo h1 {
-    font-size: 20px;
-    letter-spacing: 3px;
-    text-decoration: underline ;
-  }
-
-  .nav ul {
-    display: flex;
-    gap: 35px;
-  }
-
-.enlaces-header{
-  color: white;
-  text-decoration: none;
-  border: none;
-  background: none; 
-  list-style: none;
-  display: inline-block;
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:#000;
+color:white;
 }
 
-.enlaces-header::before {
-  margin-left: auto;
+.logo{
+font-size:24px;
+font-weight:bold;
 }
 
-.enlaces-header::after, .enlaces-header::before {
-  content: '';
-  width: 0%;
-  height: 2px;
-  background: #ffffff;
-  display: block;
-  transition: 0.5s;
+.nav ul{
+display:flex;
+gap:30px;
+list-style:none;
 }
 
-.enlaces-header:hover::after, .enlaces-header:hover::before {
-  width: 100%;
+.nav a{
+color:white;
+text-decoration:none;
+font-size:14px;
 }
 
+.menu-toggle{
+display:none;
+}
 
-
-  .header-icons {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-
-    input {
-      padding: 6px 10px;
-      border: none;
-      background: $dark;
-      color: white;
-      outline: none;
-    }
-  }
+.menu-close{
+display:none;
 }

@@ -1,7 +1,8 @@
 .catalogo {
   padding: 120px 6%;
-  background: #f5f5f5;
+  background: #000000;
   text-align: center;
+  color: white;
 }
 
 .titulo-catalogo {
@@ -9,6 +10,7 @@
   letter-spacing: 5px;
   margin-bottom: 80px;
   font-weight: 500;
+  color: white;
 }
 
 /* GALERÍA 3 POR FILA */
@@ -40,6 +42,7 @@
   object-fit: cover;
   display: block;
   transition: 0.5s ease;
+  border-radius: 10px;
 }
 
 .card-producto:hover .imagen-principal {
@@ -55,12 +58,13 @@
 }
 
 .miniaturas img {
-  width: 65px;
-  height: 65px;
+  width: 60px;
+  height: 60px;
   object-fit: cover;
   cursor: pointer;
-  opacity: 0.6;
-  transition: 0.3s ease;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  transition: 0.3s;
 }
 
 .miniaturas img:hover {
@@ -99,22 +103,6 @@
   transform: translateY(-3px);
 }
 
-/* RESPONSIVE */
-@media (max-width: 992px) {
-  .grid-catalogo {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 576px) {
-  .grid-catalogo {
-    grid-template-columns: 1fr;
-  }
-
-  .imagen-principal {
-    height: 400px;
-  }
-}
 
 
 .destacados {
