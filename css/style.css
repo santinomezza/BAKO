@@ -417,7 +417,7 @@ a {
 }
 
 .footer {
-  background: #0a0a0a;
+  background-color: black;
   color: #ccc;
   padding: 80px 5% 30px 5%;
 }
@@ -709,7 +709,7 @@ a {
 
 .catalogo {
   padding: 120px 6%;
-  background: #000000;
+  background-color: #000000;
   text-align: center;
   color: white;
 }
@@ -814,7 +814,7 @@ a {
 
 .destacados {
   padding: 80px 5%;
-  background: linear-gradient(180deg, #252424 0%, #3a3535 100%);
+  background-color: rgba(39, 41, 40, 0.8039215686);
   color: white;
 }
 
@@ -824,6 +824,41 @@ a {
   color: white;
 }
 
+.card-producto {
+  position: relative;
+}
+
+.badge-stock {
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  background: linear-gradient(45deg, #ff0000, #e32d27);
+  color: rgb(0, 0, 0);
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  z-index: 5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: badgePulse 1.8s infinite;
+}
+
+@keyframes badgePulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 1, 1, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+  }
+}
 /* ================= NOSOTROS ================= */
 .nosotros {
   width: 100%;
