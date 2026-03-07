@@ -236,4 +236,125 @@ padding:30px 20px;
 display:none;
 }
 
+
+
+
+
+ /* HERO */
+
+  .hero {
+
+    height: 45vh;
+    padding: 0 20px;
+    background-image: url(/assets/img/hero-mobile.png);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .contact-hero h1 {
+    font-size: 36px;
+    letter-spacing: 2px;
+    background-color: #0000009a;
+    padding: 10px;
+    border-radius: 15px;
+  }
+
+  .contact-hero p {
+    font-size: 14px;
+    margin-top: 2px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #00000094  ;
+  }
+
+
+  /* SECTION */
+
+  .contact-section {
+    padding: 70px 20px;
+  }
+
+
+  /* GRID → 1 COLUMNA */
+
+  .contact-container {
+
+    grid-template-columns: 1fr;
+    gap: 40px;
+
+  }
+
+
+  /* FORM */
+
+  .contact-form {
+
+    padding: 25px;
+    border-radius: 16px;
+
+  }
+
+  .contact-form h3 {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+
+    font-size: 14px;
+    padding: 14px;
+
+  }
+
+  .contact-form textarea {
+    min-height: 110px;
+  }
+
+  .contact-form button {
+
+    width: 100%;
+    font-size: 14px;
+    padding: 14px;
+
+  }
+
+
+  /* INFO */
+
+  .contact-info {
+
+    padding: 25px;
+    border-radius: 16px;
+
+    text-align: center;
+
+  }
+
+  .contact-info p {
+
+    justify-content: center;
+    font-size: 14px;
+
+  }
+
+
+  /* SOCIAL */
+
+  .contact-social {
+
+    justify-content: center;
+    gap: 18px;
+
+  }
+
+  .contact-social a {
+
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+
+  }
+
+
 }

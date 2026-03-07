@@ -28,8 +28,9 @@ if (viewer && hero) {
 }
 
 
-
-
+// ===============================
+// CAMBIO DE IMAGEN EN TARJETAS
+// ===============================
 
 document.querySelectorAll(".card-producto").forEach(card => {
 
@@ -46,6 +47,7 @@ document.querySelectorAll(".card-producto").forEach(card => {
 
 });
 
+
 // ===============================
 // CARRITO CON LOCALSTORAGE
 // ===============================
@@ -58,19 +60,24 @@ function guardarCarrito(carrito) {
   localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
+
 // AGREGAR PRODUCTO
+
 function agregarAlCarrito(nombre, precio, idCantidad = null) {
 
   let carrito = obtenerCarrito();
   let cantidad = 1;
 
   if (idCantidad) {
+
     const input = document.getElementById(idCantidad);
     cantidad = parseInt(input.value);
+
     if (isNaN(cantidad) || cantidad <= 0) {
       alert("Cantidad inválida");
       return;
     }
+
   }
 
   const productoExistente = carrito.find(prod => prod.nombre === nombre);
@@ -86,11 +93,14 @@ function agregarAlCarrito(nombre, precio, idCantidad = null) {
   }
 
   guardarCarrito(carrito);
+
   alert("Producto agregado al carrito 🛒");
+
 }
 
+
 // ===============================
-// MOSTRAR CARRITO EN carrito.html
+// MOSTRAR CARRITO
 // ===============================
 
 function mostrarCarrito() {
@@ -101,6 +111,7 @@ function mostrarCarrito() {
   if (!contenedor || !totalElemento) return;
 
   let carrito = obtenerCarrito();
+
   contenedor.innerHTML = "";
 
   let total = 0;
@@ -108,6 +119,7 @@ function mostrarCarrito() {
   carrito.forEach((producto, index) => {
 
     const subtotal = producto.precio * producto.cantidad;
+
     total += subtotal;
 
     contenedor.innerHTML += `
@@ -119,23 +131,33 @@ function mostrarCarrito() {
         <hr>
       </div>
     `;
+
   });
 
   totalElemento.innerText = "Total: $" + total;
+
 }
 
+
 function eliminarProducto(index) {
+
   let carrito = obtenerCarrito();
+
   carrito.splice(index, 1);
+
   guardarCarrito(carrito);
+
   mostrarCarrito();
+
 }
+
 
 // ===============================
 // ENVIAR PEDIDO A WHATSAPP
 // ===============================
 
 function enviarPedido(event) {
+
   event.preventDefault();
 
   let carrito = obtenerCarrito();
@@ -156,12 +178,15 @@ function enviarPedido(event) {
   let total = 0;
 
   carrito.forEach(prod => {
+
     const subtotal = prod.precio * prod.cantidad;
+
     total += subtotal;
 
     mensaje += `Producto: ${prod.nombre}\n`;
     mensaje += `Cantidad: ${prod.cantidad}\n`;
     mensaje += `Subtotal: $${subtotal}\n\n`;
+
   });
 
   mensaje += `💰 TOTAL: $${total}\n\n`;
@@ -172,57 +197,37 @@ function enviarPedido(event) {
   mensaje += `Correo: ${correo}\n`;
   mensaje += `Pago: ${pago}\n`;
 
-  const numero = "5493834340335"; // TU NUMERO
+  const numero = "5493834340335";
 
   const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
 
   window.open(url, "_blank");
+
 }
 
+
 // ===============================
-// INICIAR CUANDO CARGA LA PÁGINA
+// INICIAR AL CARGAR
 // ===============================
 
 document.addEventListener("DOMContentLoaded", () => {
+
   mostrarCarrito();
+
+  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+  const botonFinalizar = document.getElementById("boton-finalizar");
+
+  if (botonFinalizar && carrito.length > 0) {
+    botonFinalizar.style.display = "block";
+  }
+
 });
 
 
-
-
-
-
-let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
-// Mostrar botón si ya hay productos guardados
-if (carrito.length > 0) {
-  document.getElementById("boton-finalizar").style.display = "block";
-}
-
-function agregarAlCarrito(nombre, precio, idCantidad) {
-
-  const cantidad = parseInt(document.getElementById(idCantidad).value);
-
-  if (!cantidad || cantidad <= 0) return;
-
-  const productoExistente = carrito.find(p => p.nombre === nombre);
-
-  if (productoExistente) {
-    productoExistente.cantidad += cantidad;
-  } else {
-    carrito.push({
-      nombre: nombre,
-      precio: precio,
-      cantidad: cantidad
-    });
-  }
-
-  localStorage.setItem("carrito", JSON.stringify(carrito));
-
-  document.getElementById("boton-finalizar").style.display = "block";
-
-  alert("Producto añadido al carrito 🛒");
-}
+// ===============================
+// FUNCIONES EXTRA
+// ===============================
 
 function irAFormulario() {
   window.location.href = "pages/formulario.html";
@@ -233,19 +238,70 @@ function cambiarImagen(img, idPrincipal) {
 }
 
 
+// ===============================
+// MENU HAMBURGUESA (CORREGIDO)
+// ===============================
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
 
-const menuToggle = document.getElementById("menu-toggle");
-const menuClose = document.getElementById("menu-close");
-const nav = document.getElementById("nav");
+  const menuToggle = document.getElementById("menu-toggle");
+  const menuClose = document.getElementById("menu-close");
+  const nav = document.getElementById("nav");
+  const links = document.querySelectorAll(".nav-links a");
 
-menuToggle.addEventListener("click", () => {
-  nav.classList.add("nav-active");
+  if (menuToggle && nav) {
+    menuToggle.addEventListener("click", () => {
+      nav.classList.add("active");
+    });
+  }
+
+  if (menuClose && nav) {
+    menuClose.addEventListener("click", () => {
+      nav.classList.remove("active");
+    });
+  }
+
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("active");
+    });
+  });
+
 });
 
-menuClose.addEventListener("click", () => {
-  nav.classList.remove("nav-active");
+
+document.addEventListener("DOMContentLoaded", function () {
+
+const form = document.getElementById("form-contacto");
+
+form.addEventListener("submit", function(e) {
+
+e.preventDefault();
+
+const nombre = document.getElementById("nombre").value;
+const apellido = document.getElementById("apellido").value;
+const email = document.getElementById("email").value;
+const asunto = document.getElementById("asunto").value;
+const mensaje = document.getElementById("mensaje").value;
+
+const numero = "5493834340335"; // código país + número
+
+const texto = `Hola! 👋
+
+📩 Nuevo mensaje desde la web BAKO
+
+👤 Nombre: ${nombre} ${apellido}
+📧 Email: ${email}
+📌 Asunto: ${asunto}
+
+💬 Mensaje:
+${mensaje}
+`;
+
+const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+window.open(url, "_blank");
+
 });
 
 });

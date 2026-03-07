@@ -1,192 +1,201 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Contacto | BAKO</title>
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contacto | BAKO</title>
+
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
+
 <body>
 
 <header class="header">
 
-  <!-- LOGO -->
-  <div class="logo">
-    <a href="/index.html">BAKO</a>
-  </div>
+<!-- MENU HAMBURGUESA -->
+<div class="menu-toggle" id="menu-toggle">
+<i class="fas fa-bars"></i>
+</div>
 
-  <!-- BOTON HAMBURGUESA (mobile) -->
-  <div class="menu-toggle" id="menu-toggle">
-    <i class="fas fa-bars"></i>
-  </div>
+<!-- LOGO -->
+<div class="logo">
+<a href="/index.html">BAKO</a>
+</div>
 
-  <!-- MENU -->
-  <nav class="nav" id="nav">
+<!-- NAV -->
+<nav class="nav" id="nav">
 
-    <!-- BOTON CERRAR -->
-    <div class="menu-close" id="menu-close">
-      <i class="fas fa-xmark"></i>
-    </div>
+<div class="menu-close" id="menu-close">
+<i class="fas fa-xmark"></i>
+</div>
 
-    <ul class="nav-links">
+<ul class="nav-links">
 
-      <li class="enlaces-header">
-        <a href="/index.html#destacados">DESTACADOS</a>
-      </li>
+<li class="enlaces-header">
+<a href="/index.html#destacados">DESTACADOS</a>
+</li>
 
-      <li class="enlaces-header">
-        <a href="/index.html#catalogo">GORRAS</a>
-      </li>
+<li class="enlaces-header">
+<a href="/index.html#catalogo">GORRAS</a>
+</li>
 
-      <li class="enlaces-header">
-        <a href="/index.html#nosotros">NOSOTROS</a>
-      </li>
+<li class="enlaces-header">
+<a href="/index.html#nosotros">NOSOTROS</a>
+</li>
 
-      <li class="enlaces-header">
-        <a href="/pages/contacto.html">CONTACTO</a>
-      </li>
+<li class="enlaces-header">
+<a href="/pages/contacto.html">CONTACTO</a>
+</li>
 
-    </ul>
+</ul>
 
-  </nav>
+</nav>
 
-  <!-- CARRITO (SIEMPRE VISIBLE) -->
-  <a href="/pages/carrito.html" class="btn-cart" data-quantity="0">
+<!-- CARRITO -->
+<a href="/pages/carrito.html" class="btn-cart" data-quantity="0">
 
-    <svg class="icon-cart" viewBox="0 0 24 24">
-      <path d="M7 4H3L2 6H4L7 14H17L20 8H6"/>
-      <path d="M7 14L5.5 17H19"/>
-      <circle cx="9" cy="20" r="1.5"/>
-      <circle cx="17" cy="20" r="1.5"/>
-    </svg>
+<svg class="icon-cart" viewBox="0 0 24 24">
+<path d="M7 4H3L2 6H4L7 14H17L20 8H6"/>
+<path d="M7 14L5.5 17H19"/>
+<circle cx="9" cy="20" r="1.5"/>
+<circle cx="17" cy="20" r="1.5"/>
+</svg>
 
-  </a>
+</a>
 
 </header>
 
+<!-- HERO -->
 
-<section class="contact-hero">
-  <h2>Contacto</h2>
-  <p>Estamos listos para escucharte</p>
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>CONTACTO</h1>
+
+<p>Estamos listos para escucharte</p>
+
+</div>
+
 </section>
+
+<!-- CONTACT -->
 
 <section class="contact-section">
 
-  <div class="contact-container">
+<div class="contact-container">
 
-    <!-- FORMULARIO -->
-    <div class="contact-form">
-      <h3>Enviános un mensaje</h3>
+<div class="contact-form">
+
+<h3>Envíanos un mensaje</h3>
 
 <form id="form-contacto">
-<input type="text" id="nombre" placeholder="Nombre " required>
+
+<input type="text" id="nombre" placeholder="Nombre" required>
+
 <input type="text" id="apellido" placeholder="Apellido" required>
+
 <input type="email" id="email" placeholder="Email" required>
+
 <input type="text" id="asunto" placeholder="Asunto">
-<textarea id="mensaje" placeholder="Escribí tu mensaje..." required></textarea>
-        <button type="submit">Enviar mensaje</button>
-      </form>
-    </div>
 
-    <!-- INFO -->
-    <div class="contact-info">
-      <h3>Información</h3>
+<textarea id="mensaje"
+placeholder="Escribí tu mensaje..." required></textarea>
 
-      <p><i class="fas fa-map-marker-alt"></i> Buenos Aires, Argentina</p>
-      <p><i class="fas fa-envelope"></i> bakolifestyle@gmail.com</p>
-      <p><i class="fab fa-whatsapp"></i> +54 9 3518 65-1885</p>
+<button type="submit">
+Enviar mensaje
+</button>
 
-      <div class="contact-social">
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-tiktok"></i></a>
-        <a href="#"><i class="fab fa-spotify"></i></a>
-      </div>
-    </div>
+</form>
 
-  </div>
+</div>
+
+
+<div class="contact-info">
+
+<h3>Información</h3>
+
+<p><i class="fas fa-map-marker-alt"></i> Buenos Aires, Argentina</p>
+
+<p><i class="fas fa-envelope"></i> bakolifestyle@gmail.com</p>
+
+<p><i class="fab fa-whatsapp"></i> +54 9 3518 65-1885</p>
+
+<div class="contact-social">
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-tiktok"></i></a>
+
+<a href="#"><i class="fab fa-spotify"></i></a>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
+
 <footer class="footer">
 
-  <div class="footer-container">
+<div class="footer-container">
 
-    <!-- Marca -->
-    <div class="footer-col">
-      <h3 class="footer-logo">BAKO</h3>
-      <p>
-        Streetwear auténtico para quienes viven con actitud.
-        No vendemos gorras. Creamos identidad.
-      </p>
-    </div>
+<div class="footer-col">
 
-    <!-- Navegación -->
-    <div class="footer-col">
-      <h4>Navegación</h4>
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">Nosotros</a></li>
-        <li><a href="#">Lifestyle</a></li>
-      </ul>
-    </div>
+<h3 class="footer-logo">BAKO</h3>
 
-    <!-- Contacto -->
-    <div class="footer-col">
-      <h4>Contacto</h4>
-      <p>Cordoba, Argentina</p>
-      <p>Email: bakolifestyle@gmail.com</p>
-      <p>WhatsApp: +54 9 3518 65-1885</p>
-    </div>
+<p>
+Streetwear auténtico para quienes viven con actitud.
+</p>
 
-    <!-- Redes -->
-    <div class="footer-col">
-      <h4>Seguinos</h4>
-      <div class="footer-social">
-        <a href="https://instagram.com/bako.lifestyle"><i class="fab fa-instagram"></i></a>
-        <a href="https://tiktok.com/@bako.lifestyle"><i class="fab fa-tiktok"></i></a>
-        <a href="https://open.spotify.com/playlist/6Sb7OmUrccHrQIfGnsbW7U?si=PkEQZINDQvqJOHBXEtzkaw&pi=kZcwNA92S56DQ"><i class="fab fa-spotify"></i></a>
-      </div>
-    </div>
+</div>
 
-  </div>
+<div class="footer-col">
 
-  <div class="footer-bottom">
-    <p>© 2026 WEM-BOOST. Todos los derechos reservados.</p>
-  </div>
+<h4>Navegación</h4>
+
+<ul>
+
+<li><a href="/index.html">Inicio</a></li>
+
+<li><a href="/index.html#catalogo">Shop</a></li>
+
+<li><a href="/index.html#nosotros">Nosotros</a></li>
+
+</ul>
+
+</div>
+
+<div class="footer-col">
+
+<h4>Contacto</h4>
+
+<p>Argentina</p>
+
+<p>bakolifestyle@gmail.com</p>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>© 2026 WEM-BOOST</p>
+
+</div>
 
 </footer>
 
 
-<script>
-document.getElementById("form-contacto").addEventListener("submit", function(e) {
-  e.preventDefault();
+<script src="/assets/JS/script.js"></script>
 
-  const nombre = document.getElementById("nombre").value;
-  const apellido = document.getElementById("apellido").value;
-  const email = document.getElementById("email").value;
-  const asunto = document.getElementById("asunto").value;
-  const mensaje = document.getElementById("mensaje").value;
-
-  const numero = "5493834340335"; 
-
-  const texto = `Hola! 👋
-
-📌 *Nuevo mensaje desde BAKO*
-
-👤 Nombre: ${nombre}
-📧 Email: ${email}
-📝 Asunto: ${asunto}
-
-💬 Mensaje:
-${mensaje}
-`;
-
-  const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
-
-  window.open(url, "_blank");
-});
-</script>
 </body>
 </html>
